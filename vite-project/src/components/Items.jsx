@@ -1,9 +1,9 @@
 import React from 'react'
 import Todoitem from './Todoitem';
-function Items({items}){
+function Items({items , ondeleteclick}){
  return (
   <>
-   {items.map(item=>( <Todoitem tododata={item.name} tododate={item.duedate} ></Todoitem>))}
+   {items.map(item=>( <Todoitem  key={item.name}  tododata={item.name} tododate={item.duedate} ondeleteclick1 ={ondeleteclick} ></Todoitem>))}
    
   </>
  ) 
